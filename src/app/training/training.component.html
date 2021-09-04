@@ -56,12 +56,18 @@
         <li>Категория</li>
       </ul>
     </button>
-    <div class="filter__date">
+    <!-- <div class="filter__date">
       <div class="filter__date-period">Период</div>
       <div class="filter__date-year">Июнь 2019</div>
       <div class="filter__date-btn"><img src="../../assets/v.svg" /></div>
       <div class="filter__date-border"></div>
-    </div>
+    </div> -->
+    <mat-form-field appearance="fill" class="filter__date">
+      <mat-label>Июнь 2019</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
     <button class="filter__status">
       <div class="filter__status-stat">Статус</div>
       <div class="filter__status-all">Все</div>

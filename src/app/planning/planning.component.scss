@@ -1,0 +1,866 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 940px;
+  width: 1280px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #ffffff;
+  opacity: 0.94;
+}
+
+.editbar {
+  height: 940px;
+  width: 866px;
+  left: 424px;
+  top: 20px;
+  position: absolute;
+}
+
+.editbar__header {
+  position: absolute;
+  width: 866px;
+  height: 64px;
+}
+
+.editbar__header_planning {
+  position: absolute;
+  height: 24px;
+  left: 24px;
+  right: 120px;
+  top: calc(50% - 24px / 2);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__header_done {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 56px;
+  top: calc(50% - 40px / 2);
+}
+
+.editbar__header_done_box {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 8px;
+  bottom: 8px;
+}
+
+.editbar__header_done_box img {
+  position: absolute;
+  left: 18.37%;
+  right: 16.67%;
+  top: 27.46%;
+  bottom: 25%;
+}
+
+.ditbar__header_close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 16px;
+  top: calc(50% - 40px / 2);
+}
+
+.ditbar__header_close_box {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 8px;
+  bottom: 8px;
+}
+
+.ditbar__header_close_box img {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+
+.editbar__body {
+  height: 940px;
+  width: 866px;
+  position: absolute;
+}
+
+.editbar__body_tabs {
+  position: absolute;
+  width: 866px;
+  height: 37px;
+  top: 64px;
+}
+
+.editbar__body_tabs_basic {
+  position: absolute;
+  width: 64px;
+  height: 36px;
+  left: 24px;
+  border: none;
+  background: transparent;
+}
+
+.editbar__body_tabs_basic-text {
+  position: absolute;
+  height: 24px;
+  left: 0px;
+  right: 0px;
+  top: 7px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  cursor: pointer;
+}
+.editbar__body_tabs input {
+  display: none;
+}
+#tab-btn-basic:checked ~ .editbar__body_line,
+#tab-btn-part:checked ~ .editbar__body_line {
+  background: #1071ff;
+}
+#tab-btn-basic:checked ~ .editbar__body_tabs_basic-text,
+#tab-btn-part:checked ~ .editbar__body_tabs_part-text {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_line {
+  position: absolute;
+  height: 2px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+.editbar__body_tabs_part {
+  position: absolute;
+  width: 67px;
+  height: 36px;
+  left: 112px;
+  border: none;
+  background: transparent;
+}
+
+.editbar__body_tabs_part-text {
+  position: absolute;
+  height: 24px;
+  left: 0px;
+  right: 0px;
+  top: 7px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  cursor: pointer;
+}
+
+.editbar__body_line-long {
+  position: absolute;
+  width: 866px;
+  top: 35px;
+  height: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items {
+  position: absolute;
+  width: 818px;
+  height: 786px;
+  left: 24px;
+  top: 125px;
+}
+
+.editbar__body_items_programm {
+  position: absolute;
+  width: 818px;
+  height: 66px;
+}
+
+.editbar__body_items_programm-title {
+  position: absolute;
+  height: 12px;
+  left: 0px;
+  right: 34px;
+  top: 9px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.editbar__body_items_programm-text {
+  position: absolute;
+  height: 16px;
+  left: 0px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_items_programm-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 0px;
+  top: 23px;
+}
+.editbar__body_items_programm-icon img {
+  position: absolute;
+  left: 20.83%;
+  right: 20.83%;
+  top: 37.5%;
+  bottom: 27.46%;
+}
+
+.editbar__body_items_programm-line {
+  position: absolute;
+  width: 818px;
+  height: 1px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training {
+  position: absolute;
+  width: 818px;
+  height: 482px;
+  top: 90px;
+}
+
+.editbar__body_items_training-event {
+  position: absolute;
+  width: 818px;
+  height: 38px;
+}
+
+.editbar__body_items_training-event-text {
+  position: absolute;
+  height: 18px;
+  left: 0px;
+  right: 0px;
+  top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_items_training-first {
+  position: absolute;
+  width: 818px;
+  height: 140px;
+  top: 46px;
+}
+
+.editbar__body_items_training-first-title {
+  position: absolute;
+  width: 818px;
+  height: 66px;
+}
+
+.editbar__body_items_training-first-title-text1 {
+  position: absolute;
+  height: 12px;
+  left: 0px;
+  right: 0px;
+  top: 9px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.editbar__body_items_training-first-title-text2 {
+  position: absolute;
+  height: 16px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.38);
+}
+.lighter-text {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.editbar__body_items_training-first-title-line {
+  position: absolute;
+  height: 1px;
+  width: 818px;
+  top: 47px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-first-date {
+  position: absolute;
+  width: 246px;
+  height: 66px;
+  top: 74px;
+  left: 48px;
+}
+
+.editbar__body_items_training-first-date-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 23px;
+}
+.editbar__body_items_training-first-date-icon img {
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 8.33%;
+  bottom: 8.33%;
+}
+
+.editbar__body_items_training-first-date-title {
+  position: absolute;
+  height: 12px;
+  left: 34px;
+  right: 34px;
+  top: 9px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.editbar__body_items_training-first-date-day {
+  position: absolute;
+  height: 16px;
+  left: 34px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_items_training-first-date-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 1px;
+  top: 22px;
+}
+.editbar__body_items_training-first-date-close img {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+
+.editbar__body_items_training-first-date-line {
+  position: absolute;
+  width: 246px;
+  height: 1px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-first-time {
+  position: absolute;
+  width: 246px;
+  height: 66px;
+  top: 74px;
+  left: 311px;
+}
+
+.editbar__body_items_training-first-time-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 23px;
+}
+.editbar__body_items_training-first-time-icon img {
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 8.33%;
+  bottom: 8.33%;
+}
+
+.editbar__body_items_training-first-time-title {
+  position: absolute;
+  height: 12px;
+  left: 34px;
+  right: 34px;
+  top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.editbar__body_items_training-first-time-hours {
+  position: absolute;
+  height: 16px;
+  left: 34px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_items_training-first-time-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 2px;
+  top: 23px;
+}
+.editbar__body_items_training-first-time-close img {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+
+.editbar__body_items_training-first-time-line {
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-first-trainer {
+  position: absolute;
+  width: 246px;
+  height: 66px;
+  top: 74px;
+  right: 0;
+}
+
+.editbar__body_items_training-first-trainer-title {
+  position: absolute;
+  height: 12px;
+  left: 34px;
+  right: 34px;
+  top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.editbar__body_items_training-first-trainer-name {
+  position: absolute;
+  height: 16px;
+  left: 34px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_items_training-first-trainer-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 1px;
+  top: 23px;
+}
+.editbar__body_items_training-first-trainer-icon img {
+  position: absolute;
+  left: 20.83%;
+  right: 20.83%;
+  top: 37.5%;
+  bottom: 27.46%;
+}
+
+.editbar__body_items_training-first-trainer-line {
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-second {
+  position: absolute;
+  width: 818px;
+  height: 140px;
+  top: 195px;
+}
+
+.editbar__body_items_training-second-title {
+  position: absolute;
+  width: 818px;
+  height: 66px;
+}
+
+.editbar__body_items_training-second-title-text1 {
+  position: absolute;
+  height: 12px;
+  left: 0px;
+  right: 0px;
+  top: 9px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.editbar__body_items_training-second-title-text2 {
+  position: absolute;
+  height: 16px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.38);
+}
+.lighter-text {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.editbar__body_items_training-second-title-line {
+  position: absolute;
+  height: 1px;
+  width: 818px;
+  top: 47px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-second-date {
+  position: absolute;
+  width: 246px;
+  height: 66px;
+  top: 74px;
+  left: 48px;
+}
+
+.editbar__body_items_training-second-date-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 23px;
+}
+.editbar__body_items_training-second-date-icon img {
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 8.33%;
+  bottom: 8.33%;
+}
+
+.editbar__body_items_training-second-date-day {
+  position: absolute;
+  height: 16px;
+  left: 34px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.editbar__body_items_training-second-date-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 1px;
+  top: 22px;
+}
+.editbar__body_items_training-second-date-close img {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+
+.editbar__body_items_training-second-date-line {
+  position: absolute;
+  width: 246px;
+  height: 1px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-second-time {
+  position: absolute;
+  width: 246px;
+  height: 66px;
+  top: 74px;
+  left: 311px;
+}
+
+.editbar__body_items_training-second-time-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 23px;
+}
+.editbar__body_items_training-second-time-icon img {
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 8.33%;
+  bottom: 8.33%;
+}
+
+.editbar__body_items_training-second-time-hours {
+  position: absolute;
+  height: 16px;
+  left: 34px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.editbar__body_items_training-second-time-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 2px;
+  top: 23px;
+}
+.editbar__body_items_training-second-time-close img {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+
+.editbar__body_items_training-second-time-line {
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-second-trainer {
+  position: absolute;
+  width: 246px;
+  height: 66px;
+  top: 74px;
+  right: 0;
+}
+.editbar__body_items_training-second-trainer-photo {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 23px;
+}
+
+.editbar__body_items_training-second-trainer-name {
+  position: absolute;
+  height: 16px;
+  left: 34px;
+  right: 34px;
+  top: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.editbar__body_items_training-second-trainer-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 1px;
+  top: 22px;
+}
+.editbar__body_items_training-second-trainer-icon img {
+  position: absolute;
+  left: 20.83%;
+  right: 20.83%;
+  top: 37.5%;
+  bottom: 27.46%;
+}
+
+.editbar__body_items_training-second-trainer-line {
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.editbar__body_items_training-three {
+  position: absolute;
+  width: 818px;
+  height: 140px;
+  top: 342px;
+}
+
+.editbar__body_items_select {
+  position: absolute;
+  width: 818px;
+  height: 190px;
+  top: 596px;
+}
+
+.editbar__body_items_select-title {
+  position: absolute;
+  width: 818px;
+  height: 18px;
+  left: 0px;
+  right: 0px;
+  top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.editbar__body_items_select-first {
+  position: absolute;
+  width: 818px;
+  height: 36px;
+  top: 46px;
+}
+
+#radio-btn {
+  display: none;
+}
+.editbar__body_items_select-first
+  input:checked
+  ~ .editbar__body_items_select-first-btn {
+  background: rgba(16, 113, 255, 0.16);
+}
+
+.editbar__body_items_select-first-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0px;
+  top: 8px;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.editbar__body_items_select-first input:checked ~ .blue-ball {
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  border-radius: 50px;
+  background: #1071ff;
+  left: 7px;
+  top: 14.5px;
+}
