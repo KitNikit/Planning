@@ -22,7 +22,6 @@ header {
   position: relative;
   top: 26px;
   left: 27px;
-  z-index: 1;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -34,7 +33,7 @@ header {
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
+  z-index: 1;
   -webkit-touch-callout: none;
 }
 
@@ -46,7 +45,6 @@ header {
   position: relative;
   background: rgba(0, 0, 0, 0.54);
   border-radius: 3px;
-  z-index: 1;
   transition: transform 0.3s;
   transform-origin: 0% 50%;
 }
@@ -74,7 +72,7 @@ header {
   background: transparent;
   border-radius: 24px;
   border: 2px solid rgba(16, 113, 255, 0);
-  z-index: 3;
+  z-index: 1;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -212,7 +210,6 @@ header {
   background: transparent;
   border: none;
   outline: none;
-  z-index: 55;
 }
 
 .body__group {
@@ -307,6 +304,7 @@ header {
   left: calc(50% - 166px / 2 - 294px);
   background: transparent;
   border: none;
+  cursor: pointer;
   &:focus .filter__course-program {
     color: #1071ff;
   }
@@ -340,6 +338,7 @@ header {
   left: calc(50% - 166px / 2 + 98px);
   border: none;
   background: transparent;
+  cursor: pointer;
   &:focus .filter__status-stat {
     color: #1071ff;
   }
@@ -1046,7 +1045,7 @@ $top: 44.2px;
   border-radius: 4px;
   background: #ffffff;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
-  transform: scale(0);
+  transform: translate(0, -50%) scale(0);
   transition: 0.5s ease;
   z-index: 1;
 }
@@ -1082,10 +1081,9 @@ $top: 44.2px;
   border-radius: 4px;
   background: #ffffff;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
-  transform: scale(0);
+  transform: translate(50%, 50%) scale(0);
 
   transition: 0.5s ease;
-  z-index: 1;
 }
 
 .toggle-menu_small_img {
