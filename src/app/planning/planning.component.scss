@@ -1944,3 +1944,82 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.38);
 }
+
+@media (max-width: 600px) {
+  .wrapper {
+    display: none;
+  }
+
+  .editbar {
+    width: 360px;
+    left: 0;
+    top: 0;
+  }
+
+  .editbar__body_items2 {
+    left: 20px;
+  }
+
+  .editbar__header,
+  .editbar__body,
+  .editbar__body_line-long,
+  .editbar__body_tabs,
+  .editbar__body_items,
+  .editbar__body_items_programm,
+  .editbar__body_items_programm-line,
+  .editbar__body_items_select-title,
+  .editbar__body_items_select-first,
+  .editbar__body_items_select-second,
+  .editbar__body_items_select-third,
+  .editbar__body_items_select-fourth,
+  .items2__left,
+  .items2__left_title,
+  .items2__left_filter,
+  .items2__left_filter_input,
+  .items2__left_filter_footer,
+  .items2__left_users,
+  .editbar__body_items2 {
+    width: 360px;
+  }
+
+  .items2__left_filter_input-search,
+  .items2__left_filter_input-search-text,
+  .items2__left_filter_input-search-line,
+  .items2__left_filter_input-position,
+  .items2__left_filter_input-programm-line {
+    width: 150px;
+  }
+
+  .items2__left_filter_footer-options {
+    left: 120px;
+  }
+
+  .editbar__body_items,
+  .editbar__body,
+  .editbar {
+    height: 750px;
+  }
+
+  .editbar__body_items_select {
+    width: 360px;
+    top: 100px;
+  }
+
+  .items2__left_users-one-text {
+    width: 250px;
+  }
+
+  .ditbar__header_close {
+    right: 0;
+  }
+
+  .editbar__header_done {
+    right: 50px;
+  }
+
+  .editbar__body_items_training,
+  .items2__drag,
+  .items2__right {
+    display: none;
+  }
+}

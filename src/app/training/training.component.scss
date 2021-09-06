@@ -1156,12 +1156,14 @@ $top: 44.2px;
     width: 360px;
     height: 100px;
   }
+
   .header__plane {
     width: 161px;
     height: 40px;
     left: 200px;
     top: 12px;
   }
+
   .header__top {
     width: 360px;
     height: 100px;
@@ -1171,6 +1173,7 @@ $top: 44.2px;
     top: 38px;
     left: 25px;
   }
+
   .media__title {
     display: block;
     position: absolute;
@@ -1187,6 +1190,7 @@ $top: 44.2px;
     text-align: center;
     color: rgba(0, 0, 0, 0.87);
   }
+
   .media__title_btn {
     position: absolute;
     background: transparent;
@@ -1212,18 +1216,22 @@ $top: 44.2px;
     top: 64px;
     left: 22px;
   }
+
   .body__tab2 {
     left: 84px;
   }
+
   .filter__find {
     position: absolute;
     top: -152px;
     left: -45px;
   }
+
   .filter__find-border {
     top: 47px;
     width: 328px;
   }
+
   .media__options {
     display: block;
     position: absolute;
@@ -1244,6 +1252,7 @@ $top: 44.2px;
       transform: none;
     }
   }
+
   .media__sort {
     display: block;
     position: absolute;
@@ -1271,6 +1280,7 @@ $top: 44.2px;
       opacity: 1;
     }
   }
+
   .media__sort_title {
     position: absolute;
     height: 12px;
@@ -1284,6 +1294,7 @@ $top: 44.2px;
     align-items: center;
     color: rgba(0, 0, 0, 0.54);
   }
+
   .media__sort_text {
     position: absolute;
     height: 16px;
@@ -1299,6 +1310,7 @@ $top: 44.2px;
     align-items: center;
     color: rgba(0, 0, 0, 0.87);
   }
+
   .media__sort_icon {
     position: absolute;
     width: 18px;
@@ -1306,6 +1318,7 @@ $top: 44.2px;
     right: 0px;
     top: 23px;
   }
+
   .media__sort_icon img {
     position: absolute;
     left: 18.83%;
@@ -1313,6 +1326,7 @@ $top: 44.2px;
     top: 35.5%;
     bottom: 27.46%;
   }
+
   .media__sort_line {
     position: absolute;
     height: 48px;
@@ -1321,6 +1335,7 @@ $top: 44.2px;
     top: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
+
   .list {
     height: 429px;
     width: 328px;
@@ -1333,53 +1348,63 @@ $top: 44.2px;
     top: 0;
     left: 110px;
   }
+
   .list__header-part {
     width: 14px;
     left: 244px;
     overflow: hidden;
   }
+
   .list__header-progress {
     width: 58px;
     left: 278px;
   }
+
   .list__items {
     width: 328px;
     height: 388px;
   }
+
   .list__items-one {
     width: 328px;
     height: 52px;
   }
+
   .list__items-two {
     width: 328px;
     height: 52px;
     top: 52px;
     left: 0;
   }
+
   .list__items-tree {
     width: 328px;
     height: 52px;
     top: 118px;
     left: 0;
   }
+
   .list__items-four {
     width: 328px;
     height: 52px;
     top: 184px;
     left: 0;
   }
+
   .list__items-five {
     width: 328px;
     height: 52px;
     top: 260px;
     left: 0;
   }
+
   .list__items-six {
     width: 328px;
     height: 52px;
     top: 336px;
     left: 0;
   }
+
   .list__items-five div,
   .list__items-five p,
   .list__items-six div,
@@ -1391,24 +1416,28 @@ $top: 44.2px;
     left: 8px;
     top: 5px;
   }
+
   .list__items-title {
     width: 117px;
     height: 52px;
     top: 5px;
     left: 110px;
   }
+
   .list__items-part {
     width: 26px;
     height: 36px;
     top: 5px;
     left: 244px;
   }
+
   .list__items-progress {
     width: 58px;
     height: 36px;
     top: 5px;
     left: 278px;
   }
+
   .list__items-menu {
     top: 10px;
     left: 330px;
@@ -1431,6 +1460,7 @@ $top: 44.2px;
   .list__header-btn {
     display: none;
   }
+
   .body,
   .filter,
   .header__scroll,
