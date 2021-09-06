@@ -1,5 +1,5 @@
 <header class="header">
-  <button class="header__plane">
+  <button (click)="openModal()" class="header__plane">
     <div class="header__icon"><img src="../../assets/plus.svg" /></div>
     <div class="header__btn">Запланировать</div>
   </button>
@@ -10,7 +10,17 @@
         <span></span>
         <span></span>
         <span></span>
-        <ul></ul>
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Info</li></a>
+        </ul>
+      </div>
+      <div class="media__title">
+        Обучение
+        <button (click)="openModal()" class="media__title_btn">
+          <img src="../../assets/media-plus.svg" />
+        </button>
       </div>
     </div>
     <div class="header__breadcrumb">Главная &nbsp; — &nbsp; Планирование</div>
@@ -43,6 +53,23 @@
         <input placeholder="Поиск" />
       </div>
       <div class="filter__find-border"></div>
+      <button class="media__options">
+        <img src="../../assets/media-options.svg" />
+        <ul class="toggle-menu_small">
+          <li>
+            <div class="toggle-menu_small_img">
+              <img src="../../assets/pen.svg" />
+            </div>
+            Редактировать
+          </li>
+          <li>
+            <div class="toggle-menu_small_img">
+              <img src="../../assets/basket.svg" />
+            </div>
+            Удалить слот
+          </li>
+        </ul>
+      </button>
     </div>
     <button class="filter__course">
       <div class="filter__course-program">Программа</div>
@@ -50,34 +77,30 @@
       <div class="filter__course-btn"><img src="../../assets/v.svg" /></div>
       <div class="filter__course-border"></div>
       <ul class="toggle-menu">
-        <li>Организация</li>
-        <li>Роль</li>
-        <li>Статус</li>
-        <li>Категория</li>
+        <li>Страхование</li>
+        <li>Продажи</li>
+        <li>Обучение</li>
+        <li>Тестирование</li>
       </ul>
     </button>
-    <!-- <div class="filter__date">
-      <div class="filter__date-period">Период</div>
-      <div class="filter__date-year">Июнь 2019</div>
-      <div class="filter__date-btn"><img src="../../assets/v.svg" /></div>
-      <div class="filter__date-border"></div>
-    </div> -->
+
     <mat-form-field appearance="fill" class="filter__date">
-      <mat-label>Июнь 2019</mat-label>
+      <mat-label class="filter__date-year">Июнь 2019</mat-label>
       <input matInput [matDatepicker]="picker" />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+
     <button class="filter__status">
       <div class="filter__status-stat">Статус</div>
       <div class="filter__status-all">Все</div>
       <div class="filter__status-btn"><img src="../../assets/v.svg" /></div>
       <div class="filter__status-border"></div>
       <ul class="toggle-menu">
-        <li>Организация</li>
-        <li>Роль</li>
-        <li>Статус</li>
-        <li>Категория</li>
+        <li>Ожидается</li>
+        <li>В процессе</li>
+        <li>Готово</li>
+        <li>Согласование</li>
       </ul>
     </button>
   </div>
@@ -101,6 +124,18 @@
     </button>
   </div>
 </div>
+<button class="media__sort">
+  <div class="media__sort_title">Сортировка</div>
+  <div class="media__sort_text">По прогрессу обучения</div>
+  <div class="media__sort_icon"><img src="../../assets/v.svg" /></div>
+  <div class="media__sort_line"></div>
+  <ul class="toggle-menu">
+    <li>Организация</li>
+    <li>Роль</li>
+    <li>Статус</li>
+    <li>Категория</li>
+  </ul>
+</button>
 <div class="list">
   <div class="list__header">
     <div class="list__header-date">Дата начала</div>

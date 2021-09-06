@@ -1,3 +1,2 @@
-<app-training></app-training>
-
-<!-- <app-planning></app-planning> -->
+<app-training (modalState)="open($event)"></app-training>
+<app-planning *ngIf="modalState" (modalState)="close($event)"></app-planning>

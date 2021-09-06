@@ -5,4 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  modalState: boolean = false;
+
+  open(modal: boolean) {
+    this.modalState = modal;
+  }
+
+  close(modal: boolean) {
+    this.modalState = modal;
+  }
+}

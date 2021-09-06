@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-planning',
@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PlanningComponent implements OnInit {
   tab1: boolean = true;
   tab2: boolean = false;
-  modal: boolean = true;
+  modal: boolean = false;
+  @Output() modalState = new EventEmitter();
 
   setTab1() {
     this.tab1 = true;
@@ -18,11 +19,12 @@ export class PlanningComponent implements OnInit {
     this.tab2 = true;
     this.tab1 = false;
   }
-  setModal() {
-    this.modal = false;
-  }
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  closeModal() {
+    this.modalState.emit(this.modal);
+  }
 }

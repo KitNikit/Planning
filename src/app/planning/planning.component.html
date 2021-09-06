@@ -1,13 +1,13 @@
-<div *ngIf="modal" class="wrapper"></div>
-<div *ngIf="modal" class="editbar">
+<div class="wrapper"></div>
+<div class="editbar">
   <div class="editbar__header">
     <div class="editbar__header_planning">Планирование</div>
-    <button (click)="setModal()" class="editbar__header_done">
+    <button (click)="closeModal()" class="editbar__header_done">
       <div class="editbar__header_done_box">
         <img src="../../assets/done.svg" />
       </div>
     </button>
-    <button (click)="setModal()" class="ditbar__header_close">
+    <button (click)="closeModal()" class="ditbar__header_close">
       <div class="ditbar__header_close_box">
         <img src="../../assets/close.svg" />
       </div>
