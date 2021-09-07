@@ -48,11 +48,9 @@
 <div class="filter">
   <div class="filter__input">
     <div class="filter__find">
-      <div class="filter__find-image">
-        <img src="../../assets/search.svg" alt="" />
-        <input placeholder="Поиск" />
-      </div>
-      <div class="filter__find-border"></div>
+      <input type="text" required list="filter" />
+      <label>Поиск</label>
+
       <button class="media__options">
         <img src="../../assets/media-options.svg" />
         <ul class="toggle-menu_small">
@@ -73,34 +71,37 @@
     </div>
     <button class="filter__course">
       <div class="filter__course-program">Программа</div>
-      <div class="filter__course-all">Все</div>
+      <div class="filter__course-all">{{ courseMenu }}</div>
       <div class="filter__course-btn"><img src="../../assets/v.svg" /></div>
       <div class="filter__course-border"></div>
-      <ul class="toggle-menu">
-        <li>Страхование</li>
-        <li>Продажи</li>
-        <li>Обучение</li>
-        <li>Тестирование</li>
+      <ul class="menu">
+        <li (click)="courseMenu = 'Страхование'">Страхование</li>
+        <li (click)="courseMenu = 'Продажи'">Продажи</li>
+        <li (click)="courseMenu = 'Обучение'">Обучение</li>
+        <li (click)="courseMenu = 'Тестирование'">Тестирование</li>
       </ul>
     </button>
 
     <mat-form-field appearance="fill" class="filter__date">
-      <mat-label class="filter__date-year">Июнь 2019</mat-label>
-      <input matInput [matDatepicker]="picker" />
+      <mat-label>Период</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Старт" />
+        <input matEndDate placeholder="Окончание" />
+      </mat-date-range-input>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
+      <mat-date-range-picker #picker></mat-date-range-picker>
     </mat-form-field>
 
     <button class="filter__status">
       <div class="filter__status-stat">Статус</div>
-      <div class="filter__status-all">Все</div>
+      <div class="filter__status-all">{{ statusMenu }}</div>
       <div class="filter__status-btn"><img src="../../assets/v.svg" /></div>
       <div class="filter__status-border"></div>
-      <ul class="toggle-menu">
-        <li>Ожидается</li>
-        <li>В процессе</li>
-        <li>Готово</li>
-        <li>Согласование</li>
+      <ul class="menu">
+        <li (click)="statusMenu = 'Ожидается'">Ожидается</li>
+        <li (click)="statusMenu = 'В процессе'">В процессе</li>
+        <li (click)="statusMenu = 'Готово'">Готово</li>
+        <li (click)="statusMenu = 'Согласование'">Согласование</li>
       </ul>
     </button>
   </div>
@@ -111,11 +112,37 @@
         <img src="../../assets/option.svg" />
       </div>
       <div class="footer__options-filter">Настроить фильтр</div>
-      <ul class="toggle-menu">
-        <li>Организация</li>
-        <li>Роль</li>
-        <li>Статус</li>
-        <li>Категория</li>
+      <ul class="filter-menu">
+        <div class="filter-header">
+          Настройка фильтра
+          <button class="filter-menu-done">
+            <img src="../../assets/done.svg" />
+          </button>
+          <button class="filter-menu-close">
+            <img src="../../assets/close.svg" />
+          </button>
+        </div>
+        <div class="filter-menu-title">Системные поля</div>
+        <li>
+          <input type="checkbox" id="filter-btn1" />
+          <label for="filter-btn1" class="filter-menu-btn"></label>
+          Поиск
+        </li>
+        <li>
+          <input type="checkbox" id="filter-btn2" />
+          <label for="filter-btn2" class="filter-menu-btn"></label>
+          Организация
+        </li>
+        <li>
+          <input type="checkbox" id="filter-btn3" />
+          <label for="filter-btn3" class="filter-menu-btn"></label>
+          Роль
+        </li>
+        <li>
+          <input type="checkbox" id="filter-btn4" />
+          <label for="filter-btn4" class="filter-menu-btn"></label>
+          Статус
+        </li>
       </ul>
     </button>
     <button class="footer__clear">
@@ -126,14 +153,14 @@
 </div>
 <button class="media__sort">
   <div class="media__sort_title">Сортировка</div>
-  <div class="media__sort_text">По прогрессу обучения</div>
+  <div class="media__sort_text">{{ mediaMenu }}</div>
   <div class="media__sort_icon"><img src="../../assets/v.svg" /></div>
   <div class="media__sort_line"></div>
-  <ul class="toggle-menu">
-    <li>Организация</li>
-    <li>Роль</li>
-    <li>Статус</li>
-    <li>Категория</li>
+  <ul class="menu">
+    <li (click)="mediaMenu = 'Организация'">Организация</li>
+    <li (click)="mediaMenu = 'Роль'">Роль</li>
+    <li (click)="mediaMenu = 'Статус'">Статус</li>
+    <li (click)="mediaMenu = 'Категория'">Категория</li>
   </ul>
 </button>
 <div class="list">
@@ -202,7 +229,7 @@
         </ul>
       </button>
     </div>
-    <div class="list__items-tree">
+    <div class="list__items-three">
       <div class="list__items-date">19 окт, 14:30</div>
       <div class="list__items-title">Первичное обучение КС</div>
       <div class="list__items-part">8</div>

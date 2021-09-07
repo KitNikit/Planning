@@ -55,7 +55,6 @@
   right: 58px;
   top: calc(50% - 40px / 2);
   cursor: pointer;
-  border: none;
   border-radius: 50px;
   background: transparent;
   border: 2px solid rgba(16, 113, 255, 0);
@@ -71,28 +70,19 @@
 
 .editbar__header_done_box {
   position: absolute;
-  left: 8px;
+  left: 11px;
   right: 8px;
-  top: 8px;
+  top: 12px;
   bottom: 8px;
-}
-
-.editbar__header_done_box img {
-  position: absolute;
-  left: 18.37%;
-  right: 16.67%;
-  top: 27.46%;
-  bottom: 25%;
 }
 
 .ditbar__header_close {
   position: absolute;
   width: 40px;
   height: 40px;
-  right: 17px;
+  right: 16px;
   top: calc(50% - 40px / 2);
   cursor: pointer;
-  border: none;
   border-radius: 50px;
   background: transparent;
   border: 2px solid rgba(16, 113, 255, 0);
@@ -108,15 +98,15 @@
 
 .ditbar__header_close_box {
   position: absolute;
-  left: 8px;
+  left: 9px;
   right: 8px;
-  top: 8px;
+  top: 7px;
   bottom: 8px;
 }
 
 .ditbar__header_close_box img {
   position: absolute;
-  left: 25%;
+  left: 20%;
   right: 25%;
   top: 25%;
   bottom: 25%;
@@ -287,6 +277,7 @@
   top: 20px;
   border-radius: 50px;
   border: 2px solid rgba(16, 113, 255, 0);
+  transition: transform 0.5s;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -470,13 +461,6 @@
     background: rgba(16, 113, 255, 0.12);
   }
 }
-.editbar__body_items_training-first-date-close img {
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 25%;
-  bottom: 25%;
-}
 
 .editbar__body_items_training-first-date-line {
   position: absolute;
@@ -560,13 +544,6 @@
     background: rgba(16, 113, 255, 0.12);
   }
 }
-.editbar__body_items_training-first-time-close img {
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 25%;
-  bottom: 25%;
-}
 
 .editbar__body_items_training-first-time-line {
   position: absolute;
@@ -641,6 +618,7 @@
   top: 20px;
   border-radius: 50px;
   border: 2px solid rgba(16, 113, 255, 0);
+  transition: transform 0.5s;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -741,6 +719,9 @@
   &:focus .editbar__body_items_training-second-date-line {
     border-bottom: 2px solid #1071ff;
   }
+  &:focus .editbar__body_items_training-second-date-day {
+    color: rgba(0, 0, 0, 0.87);
+  }
 }
 
 .editbar__body_items_training-second-date-icon {
@@ -782,6 +763,7 @@
   top: 19px;
   border-radius: 50px;
   border: 2px solid rgba(16, 113, 255, 0);
+  transition: transform 0.5s;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -825,6 +807,9 @@
   &:focus .editbar__body_items_training-second-time-line {
     border-bottom: 2px solid #1071ff;
   }
+  &:focus .editbar__body_items_training-second-time-hours {
+    color: rgba(0, 0, 0, 0.87);
+  }
 }
 
 .editbar__body_items_training-second-time-icon {
@@ -866,6 +851,7 @@
   top: 19px;
   border-radius: 50px;
   border: 2px solid rgba(16, 113, 255, 0);
+  transition: transform 0.5s;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -910,6 +896,9 @@
   &:focus .editbar__body_items_training-second-trainer-line {
     border-bottom: 2px solid #1071ff;
   }
+  &:focus .editbar__body_items_training-second-trainer-name {
+    color: rgba(0, 0, 0, 0.87);
+  }
 }
 .editbar__body_items_training-second-trainer-photo {
   position: absolute;
@@ -943,6 +932,7 @@
   top: 19px;
   border-radius: 50px;
   border: 2px solid rgba(16, 113, 255, 0);
+  transition: transform 0.5s;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -1221,41 +1211,6 @@
   color: rgba(0, 0, 0, 0.87);
 }
 
-.toggle-menu {
-  position: absolute;
-  height: 144px;
-  width: 250px;
-  top: 50px;
-  border-radius: 4px;
-  background: #ffffff;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
-  transform: translate(0, -50%) scale(0);
-  transition: 0.5s ease;
-  z-index: 1;
-}
-.toggle-menu li {
-  display: flex;
-  height: 36px;
-  width: 250px;
-  list-style-type: none;
-  align-items: center;
-  padding-left: 20px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  cursor: pointer;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.05);
-  }
-  &:active {
-    color: #1071ff;
-    border: 1px solid #1071ff;
-  }
-}
-
 .options-menu {
   position: absolute;
   height: 334px;
@@ -1269,6 +1224,7 @@
   transition: 0.5s ease;
   z-index: 1;
 }
+
 .options-menu li {
   display: flex;
   height: 36px;
@@ -1287,7 +1243,6 @@
   }
   &:active {
     color: #1071ff;
-    border: 1px solid #1071ff;
   }
 }
 
@@ -1530,6 +1485,7 @@
   top: 20px;
   border-radius: 50px;
   border: 2px solid rgba(16, 113, 255, 0);
+  transition: transform 0.5s;
   &:hover {
     background: rgba(16, 113, 255, 0.04);
     border: 2px solid rgba(16, 113, 255, 0.04);
@@ -1943,6 +1899,85 @@
   line-height: 16px;
   text-align: center;
   color: rgba(0, 0, 0, 0.38);
+}
+
+.menu {
+  position: absolute;
+  height: 160px;
+  width: 200px;
+  top: 56px;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -50%) scale(0);
+  transition: 0.5s ease;
+  z-index: 1;
+  li {
+    position: relative;
+    display: flex;
+    height: 36px;
+    width: 200px;
+    list-style-type: none;
+    align-items: center;
+    padding-left: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    &:active {
+      color: #1071ff;
+    }
+  }
+  li:nth-child(1) {
+    margin-top: 8px;
+  }
+}
+
+.items2__left_filter_input-search {
+  position: absolute;
+  width: 166px;
+  height: 66px;
+
+  label {
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 12px;
+    position: absolute;
+    pointer-events: none;
+    left: 34px;
+    top: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  input {
+    background: url("../../assets/search.svg") no-repeat;
+    background-position: 2px 24px;
+    font-size: 16px;
+    padding: 15px;
+    display: block;
+    width: 166px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  input:focus {
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid #1071ff;
+  }
+  input:focus ~ label,
+  input:valid ~ label {
+    top: 5px;
+    font-size: 10px;
+    color: #1071ff;
+  }
 }
 
 @media (max-width: 600px) {

@@ -9,6 +9,18 @@ export class PlanningComponent implements OnInit {
   tab1: boolean = true;
   tab2: boolean = false;
   modal: boolean = false;
+  programmMenu: string = 'Страхование с заботой о клиенте';
+  trainerMenu: string = 'Сергей Ефремов';
+  dateMenu: string = 'Дата';
+  timeMenu: string = 'Время';
+  secondTrainerMenu: string = 'Тренер';
+  thirdDateMenu: string = 'Дата';
+  thirdTimeMenu: string = 'Время';
+  thirdTrainerMenu: string = 'Тренер';
+  groupMenu: string = 'Администрирование';
+  positionMenu: string = 'Менеджер по персон...';
+  experienceMenu: string = '3 — 10 лет';
+
   @Output() modalState = new EventEmitter();
 
   setTab1() {

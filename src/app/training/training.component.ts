@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-training',
@@ -6,7 +7,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./training.component.scss'],
 })
 export class TrainingComponent implements OnInit {
+  courseMenu: string = 'Все';
+  statusMenu: string = 'Все';
+  mediaMenu: string = 'По прогрессу обучения';
   modal: boolean = true;
+
   @Output() modalState = new EventEmitter();
 
   constructor() {}

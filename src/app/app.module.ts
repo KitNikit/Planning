@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { TrainingComponent } from './training/training.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlanningComponent } from './planning/planning.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, TrainingComponent, PlanningComponent],
@@ -19,6 +20,7 @@ import { PlanningComponent } from './planning/planning.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
