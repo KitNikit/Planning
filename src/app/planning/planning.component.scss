@@ -1984,11 +1984,17 @@
   .editbar {
     left: 0%;
   }
+
   .editbar__header,
   .editbar__body_tabs,
-  .editbar__body_items {
-    width: 100%;
-  }
+  .editbar__body_items2,
+  .editbar__body,
+  .items2__left,
+  .items2__left_filter,
+  .items2__left_filter_input,
+  .items2__left_filter_footer,
+  .items2__left_users,
+  .editbar__body_items,
   .editbar__body_line-long,
   .editbar__body_items_programm,
   .editbar__body_items_programm-title,
@@ -2036,6 +2042,41 @@
   .editbar__body_items_training-second-trainer {
     left: 65%;
     width: 30%;
+  }
+
+  .items2__left_filter_input-programm,
+  .items2__left_filter_input-experience {
+    right: 10%;
+  }
+
+  .items2__left_users-all-icon,
+  .items2__left_users-one-icon,
+  .items2__left_users-two-icon,
+  .items2__left_users-three-icon,
+  .items2__left_users-four-icon,
+  .items2__left_users-five-icon,
+  .items2__left_users-six-icon,
+  .items2__left_users-seven-icon,
+  .items2__left_users-eight-icon {
+    left: 5%;
+  }
+
+  .items2__left_users-all-text,
+  .items2__left_users-one-text {
+    left: 10%;
+  }
+
+  .items2__left_filter_footer-options {
+    left: 30%;
+  }
+
+  .items2__left_filter_footer-clear {
+    left: 60%;
+  }
+
+  .items2__right,
+  .items2__drag {
+    display: none;
   }
 }
 

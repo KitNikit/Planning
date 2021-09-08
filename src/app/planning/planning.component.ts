@@ -9,6 +9,7 @@ export class PlanningComponent implements OnInit {
   tab1: boolean = true;
   tab2: boolean = false;
   modal: boolean = false;
+
   programmMenu: string = 'Страхование с заботой о клиенте';
   trainerMenu: string = 'Сергей Ефремов';
   dateMenu: string = 'Дата';
