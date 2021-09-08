@@ -5,8 +5,8 @@
 }
 
 .wrapper {
-  height: 940px;
-  width: 1280px;
+  height: 100vh;
+  width: 100%;
   left: 0px;
   top: 0px;
   position: fixed;
@@ -1977,6 +1977,65 @@
     top: 5px;
     font-size: 10px;
     color: #1071ff;
+  }
+}
+
+@media (max-width: 1500px) {
+  .editbar {
+    left: 0%;
+  }
+  .editbar__header,
+  .editbar__body_tabs,
+  .editbar__body_items {
+    width: 100%;
+  }
+  .editbar__body_line-long,
+  .editbar__body_items_programm,
+  .editbar__body_items_programm-title,
+  .editbar__body_items_programm-text,
+  .editbar__body_items_programm-line,
+  .editbar__body_items_training,
+  .editbar__body_items_training-event,
+  .editbar__body_items_training-first,
+  .editbar__body_items_training-first-title,
+  .editbar__body_items_training-first-title-line,
+  .editbar__body_items_training-first-date-line,
+  .editbar__body_items_training-second,
+  .editbar__body_items_training-second-title,
+  .editbar__body_items_training-second-title-line,
+  .editbar__body_items_training-second-date-line,
+  .editbar__body_items_training-three,
+  .editbar__body_items_select,
+  .editbar__body_items_select-title,
+  .editbar__body_items_select-first,
+  .editbar__body_items_select-second,
+  .editbar__body_items_select-third,
+  .editbar__body_items_select-fourth,
+  .editbar,
+  .editbar__body {
+    width: 100%;
+  }
+
+  .editbar__body_items_programm-icon {
+    right: 5%;
+  }
+
+  .editbar__body_items_training-first-date,
+  .editbar__body_items_training-second-date {
+    left: 5%;
+    width: 25%;
+  }
+
+  .editbar__body_items_training-first-time,
+  .editbar__body_items_training-second-time {
+    left: 35%;
+    width: 25%;
+  }
+
+  .editbar__body_items_training-first-trainer,
+  .editbar__body_items_training-second-trainer {
+    left: 65%;
+    width: 30%;
   }
 }
 
